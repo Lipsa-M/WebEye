@@ -1,0 +1,263 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+
+}
+:root{
+    --main-color: #fdfcfb;
+    --text-color:#fff;
+    --bg-color:#1e1c2a;
+    --big-font:5rem;
+    --h2-font:2.25rem;
+    --p-font:0.9rem;
+}
+*::selection{
+    background: var(--main-color);
+    color:blue;
+}
+body{
+    width: 100vw;
+    color:var(--text-color);
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+header{
+    position: relative;
+    width:100vw;
+    z-index: 1000;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+   
+}
+.explore{
+    color:white;
+    font-weight: 600;
+    font-size: 2.4rem;    
+}
+.navbar{
+    display:flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-inline-end: 5%;
+}
+.navbar a{
+    /* color: var(--text-color); */
+    color: rgb(99, 182, 250);
+    font-size: 1.1rem;
+    justify-content: space-between;
+    font-weight: 500;
+    position:relative;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+
+}
+li a:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(180, 180, 16);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom:-10px;
+    transition: 0.3s;
+    justify-content: center;
+
+}
+li a:hover:after{
+    width:100%;
+    justify-self: center;
+
+}
+#menu-icon{
+    font-size: 2rem;
+}
+.hom {
+    padding: 30px;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.home{
+   
+    width: 100%;
+    min-height:90vh;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:1.5rem;
+    align-items:center
+    
+}
+.home-img img{
+   
+    height:auto;
+    width: auto;
+}
+.home-text{
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+}
+.home-text h1{  
+    color: var(--main-color);
+    position: relative;
+}
+.home-text h1::after{
+    content: "";
+    width: 30%;
+    height: 3px;
+    border-radius: 2rem;
+    background-color: aqua;
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home-text h2{
+    font-size: var(--h2-font);
+    margin: 3rem 0 2rem;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(116, 111, 111);
+    color: #fff;
+    border-radius:5rem;
+    cursor:pointer;
+
+}
+.btn:hover{
+    transform: scale(1.2) translateY(10px);
+    transition:all .4s ease;
+    background-color: rgb(180, 180, 16);
+}
+.btn::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(180, 180, 16);
+    width: 0%;
+    height: 100%;
+    border-radius:5rem;
+    z-index: -1;  
+}
+.btn:hover::after{
+    width: 100%;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+.head h2::after{
+    content: "";
+    width: 14%;
+    height: 3px;
+    border-radius: 2rem;
+    background-color: aqua;
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+.card1 {
+    width: 45%;
+    padding: 2%;
+    
+
+}
+.image{
+    aspect-ratio: 16/9;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: .5s;
+    
+}
+.image img:hover{
+    transform:translateY(-40px);
+    z-index: 10;
+
+}
+.title{
+    text-align: center;
+    color: black;
+}
+.cardbtn{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.desc{
+    justify-content: flex-start;
+    color: black;
+    font-size: small;
+    font-weight: bold;
+}
+.fundementals{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+
+}
+.row{
+    display: flex;
+    margin-inline: 15%;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.fimage-html img{
+    width: 125px;
+    height: 125px;
+}
+.fimage-css img{
+    width: 125px;
+    height: 125px;
+}
+.fimage-js img{
+    width: 110px;
+    height: 110px;
+}
+.fdisc{
+    color: black;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    margin-inline: 5%;
+}
+.footer{
+    background-color: black;
+    margin-top: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+.divfooter{
+    text-align: center;
+    align-self: center;
+}
